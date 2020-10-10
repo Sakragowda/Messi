@@ -1,5 +1,7 @@
 package TestCLS;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,15 +22,12 @@ public class actTIME {
 	      driver.findElement(By.id("username")).sendKeys("admin");
 	      driver.findElement(By.name("pwd")).sendKeys("manager");
 	      driver.findElement(By.id("loginButton")).click();
-	      Thread.sleep(3000);		
+	      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	      
-	      driver.findElement(By.xpath("//div[@class=\"popup_menu_icon\"]/parent::div[@class='popup_menu_button popup_menu_button_tips']")).click();
-	      Thread.sleep(3000);
+	      driver.findElement(By.xpath("//div[@class='popup_menu_icon']/parent::div[@class='popup_menu_button popup_menu_button_tips']")).click();
+	      driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 	      
-	      WebElement ele = driver.findElement(By.xpath("//td[@style='vertical-align: top; padding: 4px 0 20px 0; height: 16px;']"));
-	      Thread.sleep(2000);
-	      
-	      System.out.println(ele.getText());
+	      System.out.println(driver.findElement(By.xpath("//td[text()='Enter Time-Track']")).getText());
 		
 	}
 
