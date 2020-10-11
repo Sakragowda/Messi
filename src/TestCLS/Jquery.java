@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Jquery {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {             //     10 / 10 / 2020
 		// TODO Auto-generated method stub
 
 	    System.setProperty("webdriver.chrome.driver",".\\software\\chromedriver.exe" );
