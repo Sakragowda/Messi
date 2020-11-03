@@ -22,6 +22,7 @@ public class BlueStone {
 		Set<String> tabs = driver.getWindowHandles();
 		for (String tab : tabs) {
 			driver.switchTo().window(tab);
+			
 		}
 		System.out.println(driver.findElement(By.xpath("//div[text()='Pacific Mall, New Delhi']/parent::div")).getText());
 		driver.findElement(By.xpath("//div[text()='Pacific Mall, New Delhi']/parent::div/following-sibling::div[@class='col-xs-3']")).click();
